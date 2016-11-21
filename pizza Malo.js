@@ -5,16 +5,16 @@ class pizza{
     this.veggietoppings=vt;
 
   sizecost(){
-    if (this.size=="s"){
+    if (this.size=="S"){
         return 7.99
     }
-    if (this.size=="m"){
+    if (this.size=="M"){
         return 9.99
     }
-    if(this.size=="l"){
+    if(this.size=="L"){
         return 12.99
     }
-    if(this.size=="xl"){
+    if(this.size=="XL"){
         return 15.99
     }
     else{
@@ -28,9 +28,9 @@ class pizza{
         return this.veggietoppings.length*.50
     }
   price(){
-    return this.sizecost()+this.toppingcost()
+    return this.sizecost()+this.toppingcost("meat")+this.toppingcost("veggie")
     }
   //type class functions below
 static.promotionalDeal(pizza,percent){
-  return this.price()==this.sizecost()*percent
+  return this.price()==this.price()*percent
   }
